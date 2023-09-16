@@ -9,7 +9,7 @@ buttonRegister.addEventListener("submit", async (e) => {
   console.log(e.target.lastName.value);
   console.log(e.target.email.value);
   console.log(e.target.password.value);
-    const respuesta =  await fetch("http://localhost:3001/signup", {
+    const respuesta =  await fetch("http://localhost:27027/signup", {
       method: "POST",
       headers: {
       "Content-Type": "application/json"
