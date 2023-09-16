@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css"> 
+  <title>Maquetado DevTo</title>
+</head>
+
+<body class="bg-body-tertiary">
+  <nav class="navbar bg-white fixed-top mb-5 shadow-sm" id="navbar__container">
+    <div class="container-fluid">
+      <div class="left__nav--section d-flex">
+        <button class="navbar-toggler d-md-none " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="logo__button--header"><img class="site-logo__img" style="height: 40px; width: 50px;"
+            src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            alt="DEV Community"></a>
+        <div class="search__nav--section d-none d-md-block">
+          <form class="d-flex " role="search">
+            <input class="form-control me-2" style="width: 420px;" type="search" placeholder="Search"
+              aria-label="Search">
+            <button class="btn position-absolute" id="buttonforsearch" type="submit"><a href="#" class="mx-2"><img
+                  src="./img/search_icon.svg" alt="search_icon"></a></button>
+          </form>
+        </div>
+      </div>
+      <div class="right__nav--section d-flex flex-nowrap mx-1">
+        <button type="button" class="btn btn-outline-primary fw-bold d-none d-md-block fs-6 text btn__link-create"><a
+            href="">Create Post</a></button>
+        <a class="right__nav--section--search d-md-none" href="#" class="mx-2"><img src="./img/search_icon.svg"
+            alt="search_icon"></a>
+        <a href="#" class="mx-2"><img src="./img/bell_icon.svg" alt="bell_icon"></a>
+        <a href="#" class="mx-2"><img class="crayons-avatar__image" alt="" id="nav-profile-image"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ay3RvrXi--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/975225/4f71a4bb-4099-4ccf-9a89-f755a94da6b9.png"></a>
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-weight: bold;">DEV Community</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link">🏠Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🗃️Reading List</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">📃Listings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🎙️Podcasts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🎥Videos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🏷️Tags</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🛍️Forem Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">❤️Sponsors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🏳️‍🌈About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">📯Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">📖Guides</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🤔Software comparisons</a></li>
+          </ul>
+          <h5 class="my-3" style="font-weight: bold;">Other</h5>
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" href="#">👍Code of Conduct</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🤓Privacy Policy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">👀Terms of use</a></li>
+          </ul>
+          <div class="d-inline-flex justify-content-start mx-1 my-4" style="width: 100%;top: 50px;">
+            <a href="#" class="mx-2"><img src="./img/twitter.svg" alt="twitter"></a>
+            <a href="#" class="mx-2"><img src="./img/facebook.svg" alt="facebook"></a>
+            <a href="#" class="mx-2"><img src="./img/github.svg" alt="github"></a>
+            <a href="#" class="mx-2"><img src="./img/instagram.svg" alt="instagram"></a>
+            <a href="#" class="mx-2"><img src="./img/twitch.svg" alt="twitch"></a>
+            <a href="#" class="mx-2"><img src="./img/fosstodon.svg" alt="fosstodon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container-fluid text-start mt-5">
+      <div class="row">
+        <div class="col-3 d-none d-md-block mt-4" id="aside__izquierdo">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link">🏠Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🗃️Reading List</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📃Listings</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🎙️Podcasts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🎥Videos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🏷️Tags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🛍️Forem Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">❤️Sponsors</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🏳️‍🌈About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📯Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📖Guides</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🤔Software comparisons</a></li>
+            </ul>
+            <h5 class="my-3" style="font-weight: bold;">Other</h5>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link" href="#">👍Code of Conduct</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🤓Privacy Policy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">👀Terms of use</a></li>
+            </ul>
+            <div class="d-inline-flex justify-content-start mx-1 my-4" style="width: 100%;top: 50px;">
+              <a href="#" class="mx-2"><img src="./img/twitter.svg" alt="twitter"></a>
+              <a href="#" class="mx-2"><img src="./img/facebook.svg" alt="facebook"></a>
+              <a href="#" class="mx-2"><img src="./img/github.svg" alt="github"></a>
+              <a href="#" class="mx-2"><img src="./img/instagram.svg" alt="instagram"></a>
+              <a href="#" class="mx-2"><img src="./img/twitch.svg" alt="twitch"></a>
+              <a href="#" class="mx-2"><img src="./img/fosstodon.svg" alt="fosstodon"></a>
+            </div>
+          </div>
+          <div class="card text-bg-light mt-5">
+            <div class="card-header">Are you aware?</div>
+            <div class="card-body">
+              <div class="d-inline-flex">
+                <h5 class="card-title">Aware of the greatest Frontend mentor</h5>
+                <img class="crayons-avatar__image" alt="" id="nav-profile-image"
+                  src="https://ca.slack-edge.com/TCRFJBKB6-U0275TN36E8-db6aee7f44f9-512">
+              </div>
+
+              <p class="card-text">With only 30ish or something years Emi has left his mark in Kodemia. Wanna learn
+                more...?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-9 col-xl-6" id="main__container">
+          <div>
+            <ul class="d-flex position-relative" id="secondary__navbar" style="list-style-type: none">
+              <li class="mx-1 fw-bold btn ">Revelant</li>
+              <li class="mx-1 btn">Latest</li>
+              <li class="mx-1 btn">Top</li>
+
+            </ul>
+          </div>
+          <div class="w-100 col card justify-content-center" style="width: 18rem;">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--kzSSw_zT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qxvbnixzgshb140xnb8b.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="row my-2">
+                <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                    class="crayons-avatar__image" alt="" id="nav-profile-image"
+                    src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/322598830_709831830656892_1419090042844055629_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=4hiceb5sKaYAX-VZk_I&_nc_ht=scontent-lax3-2.xx&oh=00_AfBDWMVt7ON8NqKrhQVfFoolOn2r1dPkV-2WqY3hNoAYcQ&oe=64646D81">
+                </div>
+                <h5 class="col card-title">Sloan`s Inbox Q&A</h5>
+              </div>
+              <p class="card-text">
+                I'm sorry, but I don't have access to specific individuals' inboxes or personal information. As an AI
+                language model, I don't have real-time data or access to personal accounts. I can provide general
+                information, answer questions, and engage in discussions on various topics. If you have any questions or
+                need assistance with something specific, feel free to ask!</p>
+
+              <div class="row iconsreactions--comm d-flex flex-nowrap text-nowrap">
+                <div class="col-9 d-flex">
+                  <div class="col-1 " id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <p class="fs-6 me-3 mt-1">124 reactions</p>
+                  <p class="fs-6 mt-1">12 comments</p>
+                </div>
+                <div class="col-1 d-flex mt-1">
+                  <div class="col minread">
+                    6 min read
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-bookmark" viewBox="0 0 16 16">
+                      <path
+                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush ">
+              <li class="list-group-item ">
+                <div class="row my-2">
+                  <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                      class="crayons-avatar__image" alt="" id="nav-profile-image"
+                      src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/322598830_709831830656892_1419090042844055629_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=4hiceb5sKaYAX-VZk_I&_nc_ht=scontent-lax3-2.xx&oh=00_AfBDWMVt7ON8NqKrhQVfFoolOn2r1dPkV-2WqY3hNoAYcQ&oe=64646D81">
+                  </div>
+                  <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta tan
+                    chido
+                  </div>
+                  <div class="row my-2 ">
+                    <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                        class="crayons-avatar__image mx" alt="" id="nav-profile-image"
+                        src="https://ca.slack-edge.com/TCRFJBKB6-U03NM8RQZ5X-230bc9490d70-512">
+                    </div>
+                    <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta
+                      tan
+                      chido x2
+                    </div>
+                    <div class="row my-2 ">
+                      <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                          class="crayons-avatar__image" alt="" id="nav-profile-image"
+                          src="https://ca.slack-edge.com/TCRFJBKB6-U0275TN36E8-db6aee7f44f9-512">
+                      </div>
+                      <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta
+                        tan chido x3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="" class="btn bg-body-secondary border-0">See all 8 comment</a>
+            </ul>
+          </div>
+          <div class="w-100 my-3 card  justify-content-center" style="width: 18rem;">
+            <a href="./post.html"><img
+                src="https://external-preview.redd.it/_qlhx1B2BmgXNDg05_CXicpTL05lJqw9tJ8SKlIJSpw.jpg?auto=webp&v=enabled&s=91985e054fdb698b8c1a8f18fa73ee043c82d874"
+                class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <div class="row my-2">
+                <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                    class="crayons-avatar__image" alt="" id="nav-profile-image"
+                    src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/322598830_709831830656892_1419090042844055629_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=4hiceb5sKaYAX-VZk_I&_nc_ht=scontent-lax3-2.xx&oh=00_AfBDWMVt7ON8NqKrhQVfFoolOn2r1dPkV-2WqY3hNoAYcQ&oe=64646D81">
+                </div>
+                <a class="text-decoration-none text-reset col" href="./post.html">
+                  <h5 class="card-title">Data Structures In Frontend JavaScript In The Real World</h5>
+              </div>
+              </a>
+              <p class="card-text">Data structures can be intimidating. Especially for the self-taught folks among us.
+                If
+                you already tried to study data structures in JavaScript you know what typically happens:
+
+                A bunch of CS theory is thrown at you.
+                You read pages of code that manually implement e.g. a linked list.
+                All the examples are abstract using foo and bar or cats and dogs.
+                On top of that, you’re confronted with smart-looking diagrams like this...</p>
+              <div class="row iconsreactions--comm d-flex flex-nowrap text-nowrap">
+                <div class="col-9 d-flex">
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <div class="col-1" id="icon__reaction">
+                    <img
+                      src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg"
+                      class="icon--reactions" alt="" style="height: 3vh; width: 3vw;">
+                  </div>
+                  <p class="fs-6 me-3 mt-1">124 reactions</p>
+                  <p class="fs-6 mt-1">12 comments</p>
+                </div>
+                <div class="col-1 d-flex mt-1">
+                  <div class="col minread">
+                    6 min read
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-bookmark" viewBox="0 0 16 16">
+                      <path
+                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush ">
+              <li class="list-group-item ">
+                <div class="row my-2">
+                  <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                      class="crayons-avatar__image" alt="" id="nav-profile-image"
+                      src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/322598830_709831830656892_1419090042844055629_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=4hiceb5sKaYAX-VZk_I&_nc_ht=scontent-lax3-2.xx&oh=00_AfBDWMVt7ON8NqKrhQVfFoolOn2r1dPkV-2WqY3hNoAYcQ&oe=64646D81">
+                  </div>
+                  <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta tan
+                    chido
+                  </div>
+                  <div class="row my-2 ">
+                    <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                        class="crayons-avatar__image mx" alt="" id="nav-profile-image"
+                        src="https://ca.slack-edge.com/TCRFJBKB6-U03NM8RQZ5X-230bc9490d70-512">
+                    </div>
+                    <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta
+                      tan
+                      chido x2
+                    </div>
+                    <div class="row my-2 ">
+                      <div href="#" class="btn  col-1 outline-none btn-praimary d-flex justify-content-start"><img
+                          class="crayons-avatar__image" alt="" id="nav-profile-image"
+                          src="https://ca.slack-edge.com/TCRFJBKB6-U0275TN36E8-db6aee7f44f9-512">
+                      </div>
+                      <div class="bg-body-secondary mx-3 col d-flex rounded-2 justify-content-evenly ">La verdad ni esta
+                        tan chido x3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="" class="btn bg-body-secondary border-0">See all 8 comment</a>
+            </ul>
+          </div>
+        </div>
+        <div class=" col-3 d-none d-xl-block mt-4" id="aside__derecho">
+          <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <section>
+              <div class="card right-aside p-1">
+                <div class="card-body">
+                  <div class="card-header">DEV Community</div>
+                  <img src="./img/Hackaton_img.png" class="card-img-top" alt="card image">
+                  <h4 class="hackathon mt-3"> <strong> Join the GitHub + DEV Hackathon! </strong></h4>
+                  <p>Utilize GitHub Actions or Codespaces, benefit open-source, and win up to $1,500 USD by sharing your
+                    project on DEV</p>
+                </div>
+              </div>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title--listings mb-3"><strong>Listings</strong></h5>
+                    <a class="see-all" href="#">See all</a>
+                  </div>
+                  <p class="right-aside--listings">Nerd LEvel Tech<br><span class="aside__span--small">education</span>
+                  </p>
+                  <p class="right-aside--listings">Animated Portfolio Website using HTML CSS and Javascript | STEP BY
+                    STEP<br><span class="aside__span--small">education</span></p>
+                  <p class="right-aside--listings">React Typesxcript CRUD App - ReactJS Challenge 4 has been
+                    publised<br><span class="aside__span--small">education</span></p>
+                  <p class="right-aside--listings">NodeJS<br><span class="aside__span--small">collabs</span></p>
+                  <p class="right-aside--listings">Time Tracking Made Simple: Discover JCards Timesheet App<br><span
+                      class="aside__span--small">music</span></p>
+                  <p class="right-aside--listings text-center--allign mb-1"><strong class="right-aside--strong">Create a
+                      Listing</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <h5 class="right-aside--help mb-4"><strong>#discuss</strong></h5>
+                  <p class="right-aside--help">Team or Solo: Which Path Leads to Project Success?<br><span
+                      class="aside__span--small">8 comments</span></p>
+                  <div></div>
+                  <p class="right-aside--help">What was your win week?<br><span class="right-aside--span">New</span></p>
+                  <p class="right-aside--help">So... Is this PHP's Redemption? 😳<br><span class="aside__span--small">2
+                      comments</span></p>
+                  <p class="right-aside--help">What you learning about this weekend<br><span
+                      class="aside__span--small">7 comments</span></p>
+                  <p class="right-aside--help">AWhat inspired you to become a web developer<br><span
+                      class="aside__span--small">2 comments</span></p>
+                </div>
+              </div>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <h5 class="right-aside--discuss mb-4"><strong>#watercooler</strong></h5>
+                  <p class="right-aside--discuss">Robot Companions: What Superpowers Would You Give Yours?<br><span
+                      class="aside__span--small">4 comments</span></p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="footer__container ">
+
+    <p class="footer__container-text " style="text-align: center;"><a style="text-decoration: none;"
+        href="https://dev.to/">DEV Community</a>—A constructive and inclusive social network for software
+      developers. With you every step of your journy.</p>
+    <ul class="footer__container-list d-flex flex-wrap "
+      style=" display: flex; justify-content:center; list-style: none ">
+      <li class="footer__container-list-link " style="list-style: none; "><a style="text-decoration: none"
+          href="">Home</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Listing</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Postcasts</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Videos</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Tags</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">FAQ</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Forem Shop</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Sponsors</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">About</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Contact</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Guides</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Software comparasions</a>
+      </li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Code of Conduct</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Privacy</a></li>
+    </ul>
+    <p class="footer__container-text-2 " style="text-align: center;">Built on <a style="text-decoration: none; "
+        href="https://dev.to/">Forem</a>—the <a style="text-decoration: none; " href="https://dev.to/">open
+        source</a> software that powers <a style="text-decoration: none; " href="https://dev.to/">DEV</a> and
+      other inclusive communities.</p>
+    <p class="footer__container-text-3 " style="text-align: center;">Made with love and <a
+        style="text-decoration: none; " href="https://dev.to/">Ruby On Rails</a>. Dev community © 2016 - 2023.
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+  <script src="./signUp.js"></script>  
+</body>
+</html>

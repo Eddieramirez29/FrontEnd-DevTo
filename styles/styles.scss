@@ -1,0 +1,80 @@
+// .logo__button--header{
+//     right:883px;
+//     position: absolute  ;
+// }
+
+.crayons-avatar__image{
+    border-radius: 20px;
+    height: 27px;
+    width: 27px;
+    margin-right: 10px;
+}
+ #offcanvasNavbar{
+    width: 70%;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+ }
+
+ #aside-post{
+    height: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 8vh;
+ }
+
+ #aside-post > li {
+    margin-top: 2vh;
+  }
+  
+
+
+ .section__navar-2 {
+    position: relative;
+    top: 60px;
+ }
+
+ .btn:hover {
+    
+    background-color:white;
+    font-weight: bold;
+    border: none;
+    color: purple;
+    
+}
+
+.footer__container-list-link {
+   margin-right: 25px;
+}
+
+#buttonforsearch{
+   left: 430px;
+}
+
+#secondary__navbar{
+   right: 40px;
+   top: 10px;
+}
+
+.footer__container{
+   position: relative;
+   height: 230px;
+   top:100px;
+}
+
+.btn__link-create
+{
+   text-decoration: none;
+}
+.btn__link-create:hover
+{
+   text-decoration: underline;
+   color: white;
+}
+
+#icon__reaction{
+   margin-left: -10px;
+}
+
