@@ -70,7 +70,13 @@
 }/*# sourceMappingURL=styles.css.map */
 
 
-/*Código el form*/
+/*Código del form*/
+/*Separa el botón de log in del botón de creación de cuenta*/
+.btn__link-LogIn
+{
+  margin-right: 10px;
+  border: none;
+}
 
 form
 {
