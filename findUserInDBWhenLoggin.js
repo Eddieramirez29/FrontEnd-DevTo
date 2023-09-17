@@ -1,10 +1,11 @@
-const buttonLogin = document.querySelector(".btn-login_user");
+const buttonLogin = document.getElementById("Register-form");
 
 
-buttonLogin.addEventListener("sumit",  async(e) =>
+buttonLogin.addEventListener("submit",  async(e) =>
 {
     e.preventDefault();
     const email = e.target.email.value
+    console.log(e.target.email.value);
     // URL del servidor desde el que deseas obtener datos
 const apiUrl = 'http://localhost:27027/users/' + email;
 
