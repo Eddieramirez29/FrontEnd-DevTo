@@ -1,20 +1,19 @@
 const buttonRegister = document.getElementById('Register-form');
 
+
+
 buttonRegister.addEventListener("submit", async (e) => {
   e.preventDefault();
   
 
   try {
-  //   console.log(e.target.name.value);
-  // console.log(e.target.lastName.value);
-  // console.log(e.target.email.value);
-  // console.log(e.target.password.value);
-    const respuesta =  await fetch("http://localhost:27027/signup", {
+    await fetch("http://localhost:27027/signup", {
       method: "POST",
       headers:
        {
       "Content-Type": "application/json"
         },
+        //Se envía la información como formato JSON.
       body: JSON.stringify({
         name: e.target.name.value,
         lastName: e.target.lastName.value,
@@ -23,14 +22,16 @@ buttonRegister.addEventListener("submit", async (e) => {
       })
       
     } );
-    //Ir a la página de creación de posts.
+     
+    //Ir a la página de creación de confirmación de registro de usuario.
     window.location.href = "http://127.0.0.1:5500/registerCompleted.html";
    }
  
-  
-
+   
    catch (error)
   {
+    
+    
     console.error("Error al realizar la solicitud:", error);
   }
 });

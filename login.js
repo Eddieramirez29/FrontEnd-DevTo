@@ -1,5 +1,5 @@
 const buttonLogin = document.querySelector(".btn__link-LogIn");
-
+//Permite ir a la página de logueo desde la página de inicio
 buttonLogin.addEventListener("click", function()
 {
     //Ir a la página de logueo.
