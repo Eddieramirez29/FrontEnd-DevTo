@@ -1,7 +1,7 @@
 const buttonRegister = document.getElementById('Register-form');
 
 buttonRegister.addEventListener("submit", async (e) => {
-  // e.preventDefault();
+  e.preventDefault();
   
 
   try {
@@ -11,7 +11,8 @@ buttonRegister.addEventListener("submit", async (e) => {
   // console.log(e.target.password.value);
     const respuesta =  await fetch("http://localhost:27027/signup", {
       method: "POST",
-      headers: {
+      headers:
+       {
       "Content-Type": "application/json"
         },
       body: JSON.stringify({
@@ -22,7 +23,8 @@ buttonRegister.addEventListener("submit", async (e) => {
       })
       
     } );
-    setTime(alert("Suscripción exitosa!"), 1000);
+    //Ir a la página de creación de posts.
+    window.location.href = "http://127.0.0.1:5500/registerCompleted.html";
    }
  
   
@@ -32,3 +34,4 @@ buttonRegister.addEventListener("submit", async (e) => {
     console.error("Error al realizar la solicitud:", error);
   }
 });
+
