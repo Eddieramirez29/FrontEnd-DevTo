@@ -6,8 +6,7 @@ buttonLogin.addEventListener("submit",  async(e) =>
     e.preventDefault();
     const email = e.target.email.value//Obtine el email del formulario.
     const passwordUser = e.target.password.value//Obtine el password del formulario.
-    console.log(e.target.email.value);
-    console.log(e.target.password.value);
+
     // URL del servidor desde el que deseas obtener datos y que usuario en especifico
 const apiUrl = 'http://localhost:27027/users/' + email;
 
@@ -34,7 +33,7 @@ fetch(apiUrl)
 
     else
     {
-        alert('El no usuario existe');
+        alert('El no usuario no está registrado');
     }
   })
   .catch(error => {
