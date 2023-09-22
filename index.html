@@ -325,6 +325,14 @@
                 <a href="" class="btn bg-body-secondary border-0">See all 8 comment</a>
             </ul>
           </div>
+          <!--Espacio para los posts dinámicos-->
+          <div class="card" style="width: 18rem;">
+            <div  id="comments">
+              <script src="./createPostcontent.js">
+                console.log("Hola");
+              </script>
+            </div>
+          </div>
         </div>
         <div class=" col-3 d-none d-xl-block mt-4" id="aside__derecho">
           <div class="card text-bg-light mb-3" style="max-width: 18rem;">
@@ -380,10 +388,13 @@
                       class="aside__span--small">4 comments</span></p>
                 </div>
               </div>
+              
             </section>
           </div>
         </div>
       </div>
+
+      
   </main>
 
   <footer class="footer__container ">
@@ -423,5 +434,6 @@
   crossorigin="anonymous"></script>
 
   <script src="./createPost.js"></script>  
+  <script src="./sendFormPost.js"></script>
 </body>
 </html>

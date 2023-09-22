@@ -1,14 +1,20 @@
 const buttonSendPost = document.getElementById('Post-form');
-
  // Recuperar el nombre de usuario almacenado en localStorage
  const nombreUsuario = localStorage.getItem('nombreUsuario');
 
 
 buttonSendPost.addEventListener("submit", async (e) => {
   e.preventDefault();
-  
-  console.log(e.target.name.value);
-  console.log(e.target.content.value);
+  //Almacenar el usuario del post
+   localStorage.setItem('usuarioPost', nombreUsuario);
+   localStorage.setItem('tituloPost', e.target.name.value);//Almacenar el titulo
+   localStorage.setItem('contenidoPost', e.target.content.value);//Almacenar el contenido del post
+   console.log(e.target.name.value);
+ 
+   console.log(e.target.content.value);
+
+  console.log(nombreUsuario)
+ 
 
   try {
     await fetch("http://localhost:27027/posts", {
@@ -26,8 +32,9 @@ buttonSendPost.addEventListener("submit", async (e) => {
       
     } );
      
-    // //Ir a la página de creación de posts depués determinar de escribir el post
-     window.location.href = "http://127.0.0.1:5500/index.html";
+    //Ir a la página de creación de posts
+  window.location.href = "http://127.0.0.1:5500/index.html";
+
    }
  
    
