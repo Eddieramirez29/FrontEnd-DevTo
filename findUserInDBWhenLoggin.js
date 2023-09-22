@@ -23,7 +23,9 @@ fetch(apiUrl)
   .then(data => {
     // Manejar los datos obtenidos
     // Aquí puedes realizar acciones con los datos, como mostrarlos en la interfaz de usuario
-    
+    // Almacenar el nombre de usuario en localStorage
+  localStorage.setItem('nombreUsuario', data.name);
+    alert(data.name);
     //Validación para determinar si el usuario existe en la base de datos
     if(email === data.email && passwordUser === data.password)
     {

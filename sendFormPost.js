@@ -1,5 +1,7 @@
 const buttonSendPost = document.getElementById('Post-form');
 
+ // Recuperar el nombre de usuario almacenado en localStorage
+ const nombreUsuario = localStorage.getItem('nombreUsuario');
 
 
 buttonSendPost.addEventListener("submit", async (e) => {
@@ -19,13 +21,13 @@ buttonSendPost.addEventListener("submit", async (e) => {
       body: JSON.stringify({
         title: e.target.name.value,
         content: e.target.content.value,
-         user: "e.target.user.value"
-      })
+         user: nombreUsuario
+      }) 
       
     } );
      
-    // //Ir a la página de creación de confirmación de registro de usuario.
-    // window.location.href = "http://127.0.0.1:5500/registerCompleted.html";
+    // //Ir a la página de creación de posts depués determinar de escribir el post
+     window.location.href = "http://127.0.0.1:5500/index.html";
    }
  
    
