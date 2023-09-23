@@ -22,7 +22,8 @@ buttonRegister.addEventListener("submit", async (e) => {
       })
       
     } );
-     
+    localStorage.setItem('usuarioPost', e.target.name.value);
+    
     //Ir a la página de creación de confirmación de registro de usuario.
     window.location.href = "http://127.0.0.1:5500/registerCompleted.html";
    }
